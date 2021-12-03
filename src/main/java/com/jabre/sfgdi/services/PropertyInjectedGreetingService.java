@@ -4,12 +4,12 @@ import org.springframework.stereotype.Service;
 
 /**
  * @author : Jabre
- * @created : 12/1/2021, Wednesday
+ * @created : 12/2/2021, Thursday
  **/
 @Service
-public class GreetingServiceImpl implements GreetingService {
+public class PropertyInjectedGreetingService implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "Hello Worldd";
+        return "Hello World - Property";
     }
 }
