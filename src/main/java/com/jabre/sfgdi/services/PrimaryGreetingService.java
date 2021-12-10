@@ -7,11 +7,16 @@ import org.springframework.stereotype.Service;
  * @author : Jabre
  * @created : 12/3/2021, Friday
  **/
-@Primary
-@Service
 public class PrimaryGreetingService implements GreetingService {
+
+    private GreetingRepository greetingRepository;
+
+    public PrimaryGreetingService(GreetingRepository greetingRepository) {
+        this.greetingRepository = greetingRepository;
+    }
+
     @Override
     public String sayGreeting() {
-        return "Hello Word - Primary bean";
+        return greetingRepository.getEnglishGreeting();
     }
 }

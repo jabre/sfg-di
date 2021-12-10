@@ -4,6 +4,7 @@ import com.jabre.sfgdi.controllers.ConstructorInjectedController;
 import com.jabre.sfgdi.controllers.I18nController;
 import com.jabre.sfgdi.controllers.MyController;
 import com.jabre.sfgdi.controllers.PropertyInjectedController;
+import com.jabre.sfgdi.examples.FakeDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -30,6 +31,9 @@ public class SfgDiApplication {
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) applicationContext.getBean("propertyInjectedController");
 		greeting = propertyInjectedController.getGreeting();
 		System.out.println(greeting);
+
+		FakeDataSource fakeDataSource = (FakeDataSource) applicationContext.getBean("fakeDataSource");
+		System.out.println(fakeDataSource.getUser());
 
 	}
 
