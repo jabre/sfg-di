@@ -1,0 +1,12 @@
+jabre:
+  jms:
+    user: fakejms
+    password: passwordjms
+    url: somewherejms
+
+---
+spring:
+  profiles: EN
+jabre:
+  jms:
+    user: fakejms en user

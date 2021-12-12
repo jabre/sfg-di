@@ -1,0 +1,38 @@
+# This is a comment
+
+name: Jabre
+
+names:
+  - John
+  - Paul
+  - Ringo
+
+pound_sign: "#"
+
+book:
+  author: Joe Buck
+  publisher: Random house
+
+truth: yes
+
+another_truth: True
+
+more_true: true
+
+false: no #No, false, FALSE
+
+#String needs to be escaped
+string_val: "This is it's quite"
+
+colon_string: "My coures: one two three"
+
+include_new_lines: |
+  asdsa asdda sa
+  dsadas
+  dsadas
+  dasdada
+
+inogre_new_lines: >
+  sadasda
+  sdasa
+

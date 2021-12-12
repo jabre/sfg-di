@@ -5,6 +5,7 @@ import com.jabre.sfgdi.controllers.I18nController;
 import com.jabre.sfgdi.controllers.MyController;
 import com.jabre.sfgdi.controllers.PropertyInjectedController;
 import com.jabre.sfgdi.examples.FakeDataSource;
+import com.jabre.sfgdi.examples.FakeJmsBroker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -34,6 +35,9 @@ public class SfgDiApplication {
 
 		FakeDataSource fakeDataSource = (FakeDataSource) applicationContext.getBean("fakeDataSource");
 		System.out.println(fakeDataSource.getUser());
+
+		FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) applicationContext.getBean("fakeJmsBroker");
+		System.out.println(fakeJmsBroker.getUser());
 
 	}
 
